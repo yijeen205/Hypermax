@@ -8,3 +8,4 @@ public class ProductNames {
         System.out.println(product2);
         System.out.println(product3);
     }
+}
