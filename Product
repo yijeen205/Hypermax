@@ -18,4 +18,25 @@ double total = laptopPrice + mobilePrice + headphonesPrice;
         System.out.printf("Total Bill:   OMR %.3f%n", total);
     }
 }
+System.out.printf("Total Bill: OMR %.3f%n", totalBill);
+        System.out.print("Pay by card? (yes/no): ");
+        String choice = input.nextLine();
 
+        if (choice.equalsIgnoreCase("yes")) {
+            System.out.println("Please tap or insert your card.");
+            System.out.print("Enter simulated payment result (approved/declined): ");
+            String result = input.nextLine();
+
+            if (result.equalsIgnoreCase("approved")) {
+                System.out.printf("Payment successful: OMR %.3f%n", totalBill);
+                System.out.println("Thank you for your purchase!");
+            } else {
+                System.out.println("Payment unsuccessful. Please try again.");
+            }
+        } else {
+            System.out.println("Card payment cancelled.");
+        }
+
+        input.close();
+    }
+}
